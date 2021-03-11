@@ -8,7 +8,7 @@ light hooks for react/next
 npm install --save light-hooks
 ```
 
-## 📝 Usage
+## 📌 Import
 
 ```javascript
 import { useDebounce } from "light-hooks";
@@ -16,9 +16,28 @@ import { useDebounce } from "light-hooks";
 import useDebounce from "light-hooks/hooks/useDebounce";
 ```
 
-## 📝 hooks list
+## 📝 Usage (hooks list)
 
 - useDebounce
+
+```javascript
+// soon...
+```
+
 - useOutsideClick
+
+```javascript
+// soon...
+```
+
 - useThrottle
+
+```javascript
+// soon...
+```
+
 - useTimer
+
+```javascript
+// soon...
+```

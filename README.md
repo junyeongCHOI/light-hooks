@@ -1,8 +1,9 @@
 # light-hooks
 
-light hooks for react/next
 <br />
-<img align="center" src="./img/logo.svg">
+<p align="center">
+  <img src="./img/logo.svg">
+</p>
 
 ## 🛠 Insatll
 

@@ -4,13 +4,17 @@ light hooks for react/next
 
 ## 🛠 Insatll
 
-> npm install --save light-hooks
+```
+npm install --save light-hooks
+```
 
 ## 📝 Usage
 
-> import { useDebounce } from 'light-hooks';
-> or
-> import useDebounce from 'light-hooks/hooks/useDebounce';
+```javascript
+import { useDebounce } from "light-hooks";
+// or
+import useDebounce from "light-hooks/hooks/useDebounce";
+```
 
 ## 📝 hooks list
 

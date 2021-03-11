@@ -10,8 +10,7 @@ import { useRef } from "react";
  * @returns {function} debounced function
  */
 const useDebounce = (fn, wait = 1000, options) => {
-  const fnRef = useRef(debounce((...arg) => fnRef(...arg), wait, options))
-    .current;
+  const fnRef = useRef(debounce((...arg) => fn(...arg), wait, options)).current;
   return fnRef;
 };
 

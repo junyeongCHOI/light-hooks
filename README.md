@@ -1,5 +1,6 @@
 # light-hooks
 
+![logo](./logo.svg)
 light hooks for react/next
 
 ## 🛠 Insatll
@@ -41,3 +42,6 @@ import useDebounce from "light-hooks/hooks/useDebounce";
 ```javascript
 // soon...
 ```
+
+##LICENSE
+MIT

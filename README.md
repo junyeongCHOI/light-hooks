@@ -1,6 +1,5 @@
 # light-hooks
 
-<br />
 <p align="center">
   <img src="./img/logo.svg">
 </p>

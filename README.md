@@ -1,7 +1,7 @@
 # light-hooks
 
-![logo](./logo.svg)
 light hooks for react/next
+<img align="center" src="./img/logo.svg">
 
 ## 🛠 Insatll
 

@@ -1,5 +1,7 @@
 # light-hooks
 
+_No description. Just use it_
+
 <p align="center">
   <img src="./img/logo.svg">
 </p>
@@ -14,8 +16,6 @@ npm install --save light-hooks
 
 ```javascript
 import { useDebounce } from "light-hooks";
-// or
-import useDebounce from "light-hooks/hooks/useDebounce";
 ```
 
 ## 📝 Usage (hooks list)
@@ -44,5 +44,6 @@ import useDebounce from "light-hooks/hooks/useDebounce";
 // soon...
 ```
 
-##LICENSE
+## LICENSE
+
 MIT

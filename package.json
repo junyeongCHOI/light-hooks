@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "description": "light hooks for react/next",
   "main": "index.js",
+  "module": "index.js",
   "repository": "https://github.com/junyeongCHOI/light-hooks",
   "author": "junyeong CHOI <98.junyeong@gmail.com>",
   "scripts": {},

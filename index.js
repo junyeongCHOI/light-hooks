@@ -1,6 +1,4 @@
-import useDebounce from "./hooks/useDebounce";
-import useOutsideClick from "./hooks/useOutsideClick";
-import useThrottle from "./hooks/useThrottle";
-import useTimer from "./hooks/useTimer";
-
-export { useDebounce, useOutsideClick, useThrottle, useTimer };
+export { useDebounce as default } from "./hooks/useDebounce";
+export { useOutsideClick as default } from "./hooks/useOutsideClick";
+export { useThrottle as default } from "./hooks/useThrottle";
+export { useTimer as default } from "./hooks/useTimer";

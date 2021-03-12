@@ -11,6 +11,9 @@
   "author": "junyeong CHOI <98.junyeong@gmail.com>",
   "scripts": {
     "build": "npx rollup -c",
+    "start:ex": "cd example && npm run start",
+    "build:ex": "cd example && npm run start",
+    "eject:ex": "cd example && npm run eject",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"
   },

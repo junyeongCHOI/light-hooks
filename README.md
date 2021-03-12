@@ -1,6 +1,7 @@
 # light-hooks
 
 _No description. Just use it_
+[DOCS](https://junyeongchoi.github.io/light-hooks/)
 
 <p align="center">
   <img src="./img/logo.svg">
@@ -22,27 +23,11 @@ import { useDebounce } from "light-hooks";
 
 - useDebounce
 
-```javascript
-// soon...
-```
-
 - useOutsideClick
-
-```javascript
-// soon...
-```
 
 - useThrottle
 
-```javascript
-// soon...
-```
-
 - useTimer
-
-```javascript
-// soon...
-```
 
 ## LICENSE
 

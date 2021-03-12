@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/light-hooks/static/js/main.96da51de.chunk.js",
+    "main.js.map": "/light-hooks/static/js/main.96da51de.chunk.js.map",
+    "runtime-main.js": "/light-hooks/static/js/runtime-main.4b87c621.js",
+    "runtime-main.js.map": "/light-hooks/static/js/runtime-main.4b87c621.js.map",
+    "static/js/2.e3a6aac8.chunk.js": "/light-hooks/static/js/2.e3a6aac8.chunk.js",
+    "static/js/2.e3a6aac8.chunk.js.map": "/light-hooks/static/js/2.e3a6aac8.chunk.js.map",
+    "index.html": "/light-hooks/index.html",
+    "static/js/2.e3a6aac8.chunk.js.LICENSE.txt": "/light-hooks/static/js/2.e3a6aac8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b87c621.js",
+    "static/js/2.e3a6aac8.chunk.js",
+    "static/js/main.96da51de.chunk.js"
+  ]
+}

@@ -1,0 +1,2 @@
+(this["webpackJsonplight-hooks-example"]=this["webpackJsonplight-hooks-example"]||[]).push([[0],{4:function(e,o,t){"use strict";t.r(o);t(0);var s=t(2),h=t.n(s),l=t(3);h.a.render(Object(l.jsx)("h1",{children:"Hello, world!"}),document.getElementById("root"))}},[[4,1,2]]]);
+//# sourceMappingURL=main.96da51de.chunk.js.map

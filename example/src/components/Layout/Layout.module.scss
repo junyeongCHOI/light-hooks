@@ -1,0 +1,83 @@
+$navHeight: 70px;
+$procWidth: 250px;
+$lineColor: rgb(232, 232, 232);
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  min-width: 820px;
+  font-weight: 300;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.nav {
+  width: 100%;
+  height: $navHeight;
+  border-bottom: 1px solid $lineColor;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    color: rgb(32, 32, 32);
+    font-weight: 500;
+    font-size: 18px;
+    user-select: none;
+    padding: 0.5em;
+    border-radius: 2px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(255, 255, 255);
+      background: linear-gradient(to bottom right, #61dafb, #bfbf00);
+    }
+  }
+
+  .search {
+    width: 250px;
+    height: 35px;
+    border: 1px solid $lineColor;
+    font-size: 14px;
+    border-radius: 2px;
+    padding: 0 0.5rem;
+  }
+}
+
+.container {
+  width: 100%;
+  height: calc(100% - #{$navHeight});
+  display: flex;
+  font-size: 16px;
+}
+
+.proc {
+  width: $procWidth;
+  height: 100%;
+  font-size: 16px;
+  border-right: 1px solid $lineColor;
+}
+
+.ctx {
+  width: calc(100% - #{$procWidth});
+  height: 100%;
+}
+
+.hook {
+  width: 100%;
+  height: 70px;
+  color: rgb(80, 80, 80);
+  border-bottom: 1px solid $lineColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: background-color 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(242, 242, 242);
+  }
+}

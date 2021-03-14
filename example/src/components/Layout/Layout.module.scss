@@ -51,6 +51,7 @@ $lineColor: rgb(232, 232, 232);
   height: calc(100% - #{$navHeight});
   display: flex;
   font-size: 16px;
+  color: rgb(32, 32, 32);
 }
 
 .proc {
@@ -58,11 +59,14 @@ $lineColor: rgb(232, 232, 232);
   height: 100%;
   font-size: 16px;
   border-right: 1px solid $lineColor;
+  overflow: auto;
 }
 
 .ctx {
   width: calc(100% - #{$procWidth});
+  padding: 16px;
   height: 100%;
+  overflow: auto;
 }
 
 .hook {
@@ -80,4 +84,8 @@ $lineColor: rgb(232, 232, 232);
   &:hover {
     background-color: rgb(242, 242, 242);
   }
+}
+
+.now {
+  background-color: rgb(242, 242, 242);
 }

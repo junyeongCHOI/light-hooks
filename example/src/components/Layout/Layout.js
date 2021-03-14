@@ -1,9 +1,10 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import styles from "./Layout.module.scss";
 
 const Layout = ({ children, hooks, searchInput, setSearchInput }) => {
   const history = useHistory();
+  const location = useLocation();
 
   return (
     <div className={styles.wrap}>
@@ -23,9 +24,14 @@ const Layout = ({ children, hooks, searchInput, setSearchInput }) => {
       </div>
       <div className={styles.container}>
         <div className={styles.proc}>
-          {hooks.map((hook) => (
+          {hooks.map((hook, idx) => (
             <div
-              className={styles.hook}
+              key={`list_${hook.name}_${idx}`}
+              className={`${styles.hook} ${
+                location.pathname === `/light-hooks/${hook.name}`
+                  ? styles.now
+                  : ""
+              }`}
               onClick={() => history.push(`/light-hooks/${hook.name}`)}
             >
               {hook.name}

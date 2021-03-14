@@ -22,7 +22,7 @@ import { useDebounce } from "light-hooks";
 
 ## 📝 Usage (hooks list)
 
-- useDebounce
+- [useDebounce](https://junyeongchoi.github.io/light-hooks/useDebounce)
 
 - useOutsideClick
 

@@ -45,7 +45,7 @@ const UseDebounce = () => {
 import React, { useState } from "react";
 import { useDebounce } from "light-hooks";
 
-const DebounceTest = () => {
+const UseDebounceTest = () => {
   const [value, setValue] = useState("");
   const [debouncedValue, setDebouncedValue] = useState("");
   const debounced = useDebounce((value) => setDebouncedValue(value), 500);
@@ -66,7 +66,7 @@ const DebounceTest = () => {
   );
 }
 
-export default DebounceTest;
+export default UseDebounceTest;
           `}
         </SyntaxHighlighter>
       </div>

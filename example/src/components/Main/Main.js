@@ -15,6 +15,10 @@ const Main = () => {
           <div className={styles.title}>DOC</div>
           https://junyeongchoi.github.io/light-hooks
         </div>
+        <div className={styles.text}>
+          <div className={styles.title}>npm</div>
+          https://www.npmjs.com/package/light-hooks
+        </div>
       </div>
     </div>
   );

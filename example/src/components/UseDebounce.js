@@ -7,7 +7,7 @@ import styles from "./common.module.scss";
 const UseDebounce = () => {
   const [value, setValue] = useState("");
   const [debouncedValue, setDebouncedValue] = useState("");
-  const debounced = useDebounce((value) => setDebouncedValue(value), 1500);
+  const debounced = useDebounce((value) => setDebouncedValue(value), 500);
 
   return (
     <div className={styles.wrap}>
@@ -20,23 +20,35 @@ const UseDebounce = () => {
         <br />
         <br />
         {`
-        options = { leading? : boolean, trailing? : boolean }
+        options = { leading? : boolean, trailing? : boolean, maxWait? : number }
         `}
         <br />
         <br />
         returns debounced function
       </div>
-      <div className={styles.title}>Usage</div>
+      <div className={styles.title}>Example</div>
+      <div className={styles.container}>
+        <input
+          className={styles.input}
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value);
+            debounced(e.target.value);
+          }}
+          placeholder="type"
+        />
+        result: {debouncedValue}
+      </div>
       <div className={styles.container}>
         <SyntaxHighlighter language="javascript" style={a11yDark}>
           {`
+import React, { useState } from "react";
 import { useDebounce } from "light-hooks";
 
 const DebounceTest = () => {
-
   const [value, setValue] = useState("");
   const [debouncedValue, setDebouncedValue] = useState("");
-  const debounced = useDebounce((value) => setDebouncedValue(value), 1500);
+  const debounced = useDebounce((value) => setDebouncedValue(value), 500);
 
   return (
     <>
@@ -57,19 +69,6 @@ const DebounceTest = () => {
 export default DebounceTest;
           `}
         </SyntaxHighlighter>
-      </div>
-      <div className={styles.title}>Example</div>
-      <div className={styles.container}>
-        <input
-          className={styles.input}
-          value={value}
-          onChange={(e) => {
-            setValue(e.target.value);
-            debounced(e.target.value);
-          }}
-          placeholder="type"
-        />
-        result: {debouncedValue}
       </div>
     </div>
   );

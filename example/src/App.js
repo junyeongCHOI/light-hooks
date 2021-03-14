@@ -4,10 +4,11 @@ import Layout from "./components/Layout/Layout";
 import Main from "./components/Main/Main";
 //hooks
 import UseDebounce from "./components/UseDebounce";
+import UseThrottle from "./components/UseThrottle";
 
 const hooks = [
   { name: "useDebounce", component: UseDebounce },
-  { name: "useThrottle", component: "" },
+  { name: "useThrottle", component: UseThrottle },
   { name: "useOutsideClick", component: "" },
   { name: "useTimer", component: "" },
 ];

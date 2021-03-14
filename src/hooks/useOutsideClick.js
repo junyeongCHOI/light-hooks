@@ -9,9 +9,9 @@ const useOutsideClick = () => {
   const containerRef = useRef(null);
   const [isOutsideClick, setOutSideClick] = useState(false);
 
-  const handleClickOutside = () => {
-    if (container.current) {
-      setOutSideClick(container.current.contains(e.target));
+  const handleClickOutside = (e) => {
+    if (containerRef.current) {
+      setOutSideClick(!containerRef.current.contains(e.target));
     }
   };
 
@@ -19,7 +19,7 @@ const useOutsideClick = () => {
     document.addEventListener("mousedown", handleClickOutside);
 
     () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [container.current]);
+  }, [containerRef.current]);
 
   return [containerRef, isOutsideClick];
 };

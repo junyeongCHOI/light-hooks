@@ -5,11 +5,12 @@ import Main from "./components/Main/Main";
 //hooks
 import UseDebounce from "./components/UseDebounce";
 import UseThrottle from "./components/UseThrottle";
+import UseOutsideClick from "./components/UseOutsideClick";
 
 const hooks = [
   { name: "useDebounce", component: UseDebounce },
   { name: "useThrottle", component: UseThrottle },
-  { name: "useOutsideClick", component: "" },
+  { name: "useOutsideClick", component: UseOutsideClick },
   { name: "useTimer", component: "" },
 ];
 

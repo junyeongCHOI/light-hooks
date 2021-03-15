@@ -14,7 +14,7 @@ const useDebounce = (fn, wait = 1000, options) => {
 
   useEffect(() => {
     return () => fnRef.cancel();
-  });
+  }, []);
 
   return fnRef;
 };

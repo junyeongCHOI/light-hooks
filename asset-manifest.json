@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/light-hooks/static/css/main.ab317706.chunk.css",
-    "main.js": "/light-hooks/static/js/main.02df777d.chunk.js",
-    "main.js.map": "/light-hooks/static/js/main.02df777d.chunk.js.map",
+    "main.js": "/light-hooks/static/js/main.2101eeec.chunk.js",
+    "main.js.map": "/light-hooks/static/js/main.2101eeec.chunk.js.map",
     "runtime-main.js": "/light-hooks/static/js/runtime-main.4b87c621.js",
     "runtime-main.js.map": "/light-hooks/static/js/runtime-main.4b87c621.js.map",
-    "static/js/2.25575945.chunk.js": "/light-hooks/static/js/2.25575945.chunk.js",
-    "static/js/2.25575945.chunk.js.map": "/light-hooks/static/js/2.25575945.chunk.js.map",
+    "static/js/2.dc450e5e.chunk.js": "/light-hooks/static/js/2.dc450e5e.chunk.js",
+    "static/js/2.dc450e5e.chunk.js.map": "/light-hooks/static/js/2.dc450e5e.chunk.js.map",
     "index.html": "/light-hooks/index.html",
     "static/css/main.ab317706.chunk.css.map": "/light-hooks/static/css/main.ab317706.chunk.css.map",
-    "static/js/2.25575945.chunk.js.LICENSE.txt": "/light-hooks/static/js/2.25575945.chunk.js.LICENSE.txt",
+    "static/js/2.dc450e5e.chunk.js.LICENSE.txt": "/light-hooks/static/js/2.dc450e5e.chunk.js.LICENSE.txt",
     "static/media/logo.ac2407ab.svg": "/light-hooks/static/media/logo.ac2407ab.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4b87c621.js",
-    "static/js/2.25575945.chunk.js",
+    "static/js/2.dc450e5e.chunk.js",
     "static/css/main.ab317706.chunk.css",
-    "static/js/main.02df777d.chunk.js"
+    "static/js/main.2101eeec.chunk.js"
   ]
 }

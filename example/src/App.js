@@ -6,13 +6,31 @@ import Main from "./components/Main/Main";
 import UseDebounce from "./components/UseDebounce";
 import UseThrottle from "./components/UseThrottle";
 import UseOutsideClick from "./components/UseOutsideClick";
+import UseGlobalEvent from "./components/UseGlobalEvent";
+import UseTimer from "./components/UseTimer";
 
 const hooks = [
   { name: "useDebounce", component: UseDebounce },
   { name: "useThrottle", component: UseThrottle },
   { name: "useOutsideClick", component: UseOutsideClick },
-  { name: "useTimer", component: "" },
+  { name: "useGlobalEvent", component: UseGlobalEvent },
+  { name: "useTimer", component: UseTimer },
 ];
+
+hooks.sort((pre, cur) => {
+  const preName = pre.name.toUpperCase();
+  const curName = cur.name.toUpperCase();
+
+  if (preName < curName) {
+    return -1;
+  }
+
+  if (preName > curName) {
+    return 1;
+  }
+
+  return 0;
+});
 
 const App = () => {
   const [searchInput, setSearchInput] = useState("");

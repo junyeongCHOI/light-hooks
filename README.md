@@ -26,6 +26,8 @@ import { useDebounce } from "light-hooks";
 
 - useDebounce
 
+- useGlobalEvent
+
 - useOutsideClick
 
 - useThrottle

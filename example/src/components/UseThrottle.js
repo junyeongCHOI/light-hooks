@@ -6,14 +6,15 @@ import styles from "./common.module.scss";
 
 const UseThrottle = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const throttled = useThrottle(
-    (e) => setMousePosition({ x: e.x, y: e.y }),
-    1000
-  );
+  const throttled = useThrottle((e) => {
+    setMousePosition({ x: e.x, y: e.y });
+  }, 1000);
 
   useEffect(() => {
     document.addEventListener("mousemove", throttled);
-    () => document.removeEventListener("mousemove", throttled);
+    return () => {
+      document.removeEventListener("mousemove", throttled);
+    };
   }, []);
 
   return (
@@ -52,7 +53,7 @@ const UseThrottleTest = () => {
   
     useEffect(() => {
       document.addEventListener("mousemove", throttled);
-      () => document.removeEventListener("mousemove", throttled);
+      return () => document.removeEventListener("mousemove", throttled);
     }, []);
 
   return (

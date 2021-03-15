@@ -1,11 +1,11 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 /**
  * timer hook
  * 2021.03.11 junyoung CHOI
  * @param {number} initialTime default: 300
  * @param {number} timeInterval default: 1000ms
- * @param {object} options { isCountDown?: boolean; max?: number; min?:number} isCountDown: default true, max: default Infinity, min: default 0
+ * @param {object} options { isCountDown?: boolean, max?: number, min?:number} isCountDown: default true, max: default Infinity, min: default 0
  * @returns {Array} [time, setTime, start, stop]
  */
 const useTimer = (initialTime = 300, timeInterval = 1000, options = {}) => {
@@ -30,7 +30,7 @@ const useTimer = (initialTime = 300, timeInterval = 1000, options = {}) => {
     clearTimeout(clearSetT.current);
 
     if (isReset) {
-      setTime(initailTime);
+      setTime(initialTime);
     }
 
     isStarted.current = false;
@@ -67,6 +67,10 @@ const useTimer = (initialTime = 300, timeInterval = 1000, options = {}) => {
 
     isStarted.current = true;
   };
+
+  useEffect(() => {
+    return () => stop();
+  }, []);
 
   return [time, setTime, start, stop];
 };

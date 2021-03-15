@@ -1,5 +1,5 @@
 import debounce from "lodash.debounce";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 /**
  * debounce hook
@@ -11,6 +11,11 @@ import { useRef } from "react";
  */
 const useDebounce = (fn, wait = 1000, options) => {
   const fnRef = useRef(debounce((...arg) => fn(...arg), wait, options)).current;
+
+  useEffect(() => {
+    return () => fnRef.cancel();
+  });
+
   return fnRef;
 };
 

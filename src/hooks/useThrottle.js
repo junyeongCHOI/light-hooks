@@ -1,5 +1,5 @@
 import throttle from "lodash.throttle";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 /**
  * throttle hook
@@ -11,6 +11,11 @@ import { useRef } from "react";
  */
 const useThrottle = (fn, wait = 1000, options) => {
   const fnRef = useRef(throttle((...arg) => fn(...arg), wait, options)).current;
+
+  useEffect(() => {
+    return () => fnRef.cancel();
+  }, []);
+
   return fnRef;
 };
 

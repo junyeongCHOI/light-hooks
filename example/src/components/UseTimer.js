@@ -23,8 +23,7 @@ const UseTimer = () => {
         timeInterval = number (default = 1000ms)
         <br />
         <br />
-        options =
-        {`{ isCountDown?: boolean, max?: number, min?:number} isCountDown: default true, max: default Infinity, min: default 0`}
+        options ={`{ isCountDown?: boolean, max?: number, min?:number}`}
         <br />
         <br />
         returns [time, setTime, start, stop]

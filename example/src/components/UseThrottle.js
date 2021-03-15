@@ -27,9 +27,7 @@ const UseThrottle = () => {
         wait = number (ms)
         <br />
         <br />
-        {`
-        options = { leading? : boolean, trailing? : boolean }
-        `}
+        options = {`{ leading? : boolean, trailing? : boolean }`}
         <br />
         <br />
         returns throttled function

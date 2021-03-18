@@ -7,6 +7,10 @@ import UseTimerExample from "../components/Hooks/UseTimerExample";
 count up, count down `타이머` 입니다.
 `setTimout`으로 함수 실행 시간을 합하여 설정한 interval에 수행합니다.
 
+**count의 실행을 무조건적으로 보장하지 않습니다.**
+**event loop에 여유가 없거나 탭 혹은 브라우저의 우선순위가 밀려있을 경우 타이머는 draft 되고 이후 draft 됐던 count가 연속적으로 실행됩니다.**
+**이 hook은 실제 실행해야 할 시간과 daft된 시간을 계산합니다.**
+
 useTimer(initialTime, timeInterval, options)
 
 initialTime = number (default = 300)

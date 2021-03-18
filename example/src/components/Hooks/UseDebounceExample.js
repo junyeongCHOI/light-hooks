@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDebounce } from "light-hooks";
 import styles from "../common.module.scss";
 
-const UseDebounce = () => {
+const UseDebounceExample = () => {
   const [value, setValue] = useState("");
   const [debouncedValue, setDebouncedValue] = useState("");
   const debounced = useDebounce((value) => setDebouncedValue(value), 500);
@@ -23,4 +23,4 @@ const UseDebounce = () => {
   );
 };
 
-export default UseDebounce;
+export default UseDebounceExample;

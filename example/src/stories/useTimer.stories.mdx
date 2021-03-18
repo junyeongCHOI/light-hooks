@@ -1,0 +1,59 @@
+import UseTimerExample from "../components/Hooks/UseTimerExample";
+
+<Meta title="Example/useTimer" component={UseTimerExample} />
+
+# useTimer
+
+count up, count down `타이머` 입니다.
+`setTimout`으로 함수 실행 시간을 합하여 설정한 interval에 수행합니다.
+
+useTimer(initialTime, timeInterval, options)
+
+initialTime = number (default = 300)
+
+timeInterval = number (default = 1000ms)
+
+options = { isCountDown?: boolean, max?: number, min?:number}
+
+returns [time, setTime, start, stop]
+
+# Example
+
+<UseTimerExample />
+
+# Code
+
+```jsx
+import React from "react";
+import { useTimer } from "light-hooks";
+
+const UseTimerExample = () => {
+  const [time1, setTime1, start1, stop1] = useTimer();
+  const [time2, setTime2, start2, stop2] = useTimer(10, 1000, {
+    isCountDown: false,
+  });
+
+  return (
+    <>
+      <div style={{ marginBottom: 16 }}>
+        <button onClick={() => setTime1(1000)}>Set time 1000</button>
+        <button onClick={() => start1()}>Start count down</button>
+        <button onClick={() => stop1()} style={{ marginRight: 16 }}>
+          Stop count down and reset
+        </button>
+        time1: {time1}
+      </div>
+      <div>
+        <button onClick={() => setTime2(1000)}>Set time 1000</button>
+        <button onClick={() => start2()}>Start count up</button>
+        <button onClick={() => stop2(true)} style={{ marginRight: 16 }}>
+          Stop count up and reset(initial time)
+        </button>
+        time2: {time2}
+      </div>
+    </>
+  );
+};
+
+export default UseTimerExample;
+```

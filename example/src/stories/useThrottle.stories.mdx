@@ -1,0 +1,47 @@
+import UseThrottleExample from "../components/Hooks/UseThrottleExample";
+
+<Meta title="Example/useThrottle" component={UseThrottleExample} />
+
+# useThrottle
+
+`throttled` 된 `함수`를 반환합니다.
+
+useThrottle(func, wait, options)
+
+wait = number (ms)
+
+options = { leading? : boolean, trailing? : boolean }
+
+returns throttled function
+
+# Example
+
+<UseThrottleExample />
+
+# Code
+
+```jsx
+import React, { useState, useEffect } from "react";
+import { useThrottle } from "light-hooks";
+
+const UseThrottleExample = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const throttled = useThrottle(
+    (e) => setMousePosition({ x: e.x, y: e.y }),
+    1000
+  );
+
+  useEffect(() => {
+    document.addEventListener("mousemove", throttled);
+    return () => document.removeEventListener("mousemove", throttled);
+  }, []);
+
+  return (
+    <div>
+      Mouse position: ({mousePosition.x}, {mousePosition.y})
+    </div>
+  );
+};
+
+export default UseThrottleExample;
+```

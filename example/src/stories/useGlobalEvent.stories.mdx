@@ -1,0 +1,47 @@
+import UseGlobalEventExample from "../components/Hooks/UseGlobalEventExample";
+
+<Meta title="Example/useGlobalEvent" component={UseGlobalEventExample} />
+
+# useGlobalEvent
+
+`글로벌한 이벤트`를 `생성`하고`리스너를 등록`합니다.
+이 이벤트는 `window`에 담기며 `document`에 emit 됩니다.
+
+useGlobalEvent(eventName, func, array)
+
+eventName = string
+
+func = listenr function
+
+array = useEffect dependency array (add, remove eventlistener)
+
+returns globalEmit function
+
+# Example
+
+<UseGlobalEventExample />
+
+# Code
+
+```jsx
+import React, { useState } from "react";
+import { useGlobalEvent } from "light-hooks";
+
+const UseGlobalEventExample = () => {
+  const [count, setCount] = useState(0);
+  const emit = useGlobalEvent("increment", () =>
+    setCount((count) => count + 1)
+  );
+
+  return (
+    <>
+      <button onClick={() => emit("increment")} style={{ marginRight: 16 }}>
+        Increment
+      </button>
+      count: {count}
+    </>
+  );
+};
+
+export default UseGlobalEventExample;
+```

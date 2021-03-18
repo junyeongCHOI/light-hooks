@@ -3,9 +3,18 @@ import { useGlobalEvent } from "light-hooks";
 
 const UseGlobalEventExample = () => {
   const [count, setCount] = useState(0);
-  useGlobalEvent("increment", () => setCount((count) => count + 1));
+  const emit = useGlobalEvent("increment", () =>
+    setCount((count) => count + 1)
+  );
 
-  return <div>count: {count}</div>;
+  return (
+    <>
+      <button onClick={() => emit("increment")} style={{ marginRight: 16 }}>
+        Increment
+      </button>
+      count: {count}
+    </>
+  );
 };
 
 export default UseGlobalEventExample;

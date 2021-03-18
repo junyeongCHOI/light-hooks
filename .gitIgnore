@@ -2,3 +2,4 @@ node_modules
 dist
 build
 example/build
+storybook-static

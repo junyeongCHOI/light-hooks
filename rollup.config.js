@@ -2,6 +2,7 @@ import babel from "rollup-plugin-babel";
 import external from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
+import json from "rollup-plugin-json";
 import { terser } from "rollup-plugin-terser";
 import pkg from "./package.json";
 
@@ -18,6 +19,7 @@ export default {
       include: "node_modules/**",
     }),
     babel({ extensions, include: ["src/**/*"], runtimeHelpers: true }),
+    json(),
     terser(),
   ],
   output: [

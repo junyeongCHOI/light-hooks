@@ -17,12 +17,14 @@ npm install --save light-hooks
 ## 📌 Import
 
 ```javascript
-import { useDebounce } from "light-hooks";
+import { useAxios } from "light-hooks";
 ```
 
 ## 📝 List
 
 [Check usage and example](https://junyeongchoi.github.io/light-hooks/)
+
+- useAxios
 
 - useDebounce
 

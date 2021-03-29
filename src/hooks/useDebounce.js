@@ -6,7 +6,7 @@ import { useRef, useEffect } from "react";
  * 2021.03.11 junyeong CHOI
  * @param {function} fn
  * @param {number} wait default 1000ms
- * @param {object} options { leading?: boolean; trailing?: boolean; }
+ * @param {object} options { leading?: boolean, trailing?: boolean }
  * @returns {function} debounced function
  */
 const useDebounce = (fn, wait = 1000, options) => {

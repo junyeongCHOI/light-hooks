@@ -35,6 +35,7 @@ post(body, configs)
 ```jsx
 import { useState } from "react";
 import { useAxios } from "light-hooks";
+import styles from "../common.module.scss";
 
 const baseUrl = "https://jsonplaceholder.typicode.com";
 
@@ -51,7 +52,7 @@ const UseAxiosExample = () => {
   return (
     <>
       <div>
-        <button onClick={() => getPhotos()}>
+        <button className={styles.btn} onClick={() => getPhotos()}>
           {isPhotosLoading ? "loading..." : "get photos"}
         </button>
         <div
@@ -73,27 +74,33 @@ const UseAxiosExample = () => {
       </div>
       <div>
         <input
+          className={styles.input}
           value={id}
           onChange={(e) => setId(e.target.value)}
           placeholder="user id"
         />
-        <button onClick={() => userPosts.get()}>
+        <button className={styles.btn} onClick={() => userPosts.get()}>
           {userPosts.isLoading ? "loading..." : "get user posts"}
         </button>
         {<div>{JSON.stringify(userPosts.data)}</div>}
       </div>
       <div>
         <input
+          className={styles.input}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="title"
         />
         <input
+          className={styles.input}
           value={body}
           onChange={(e) => setBody(e.target.value)}
           placeholder="body"
         />
-        <button onClick={() => posts.post({ title, body })}>
+        <button
+          className={styles.btn}
+          onClick={() => posts.post({ title, body })}
+        >
           {posts.isLoading ? "loading..." : "post posts"}
         </button>
         {<div>{JSON.stringify(posts.data)}</div>}

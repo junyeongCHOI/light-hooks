@@ -1,6 +1,6 @@
 # light-hooks
 
-_No description. Just use it_
+React, Next을 위한 가볍고 Minified된 React Hook들입니다.
 <br />
 [DOCS : https://junyeongchoi.github.io/light-hooks/](https://junyeongchoi.github.io/light-hooks/)
 
@@ -24,17 +24,17 @@ import { useAxios } from "light-hooks";
 
 [Check usage and example](https://junyeongchoi.github.io/light-hooks/)
 
-- useAxios
+- [useAxios](https://junyeongchoi.github.io/light-hooks/?path=/story/example-useaxios--page)
 
-- useDebounce
+- [useDebounce](https://junyeongchoi.github.io/light-hooks/?path=/story/example-usedebounce--page)
 
-- useGlobalEvent
+- [useGlobalEvent](https://junyeongchoi.github.io/light-hooks/?path=/story/example-useglobalevent--page)
 
-- useOutsideClick
+- [useOutsideClick](https://junyeongchoi.github.io/light-hooks/?path=/story/example-useoutsideclick--page)
 
-- useThrottle
+- [useThrottle](https://junyeongchoi.github.io/light-hooks/?path=/story/example-usethrottle--page)
 
-- useTimer
+- [useTimer](https://junyeongchoi.github.io/light-hooks/?path=/story/example-usetimer--page)
 
 ## LICENSE
 

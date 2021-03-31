@@ -8,8 +8,8 @@ const UseAxiosExample = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [id, setId] = useState("");
-  const { get: getPhotos, data: photos, isLoading: isPhotosLoading } = useAxios(
-    `${baseUrl}/photos`
+  const { get: getPosts, data: allPosts, isLoading: isPostsLoading } = useAxios(
+    `${baseUrl}/posts`
   );
   const posts = useAxios(`${baseUrl}/posts`, "");
   const userPosts = useAxios(`${baseUrl}/users/${id}/posts`, "");
@@ -17,8 +17,8 @@ const UseAxiosExample = () => {
   return (
     <>
       <div>
-        <button className={styles.btn} onClick={() => getPhotos()}>
-          {isPhotosLoading ? "loading..." : "get photos"}
+        <button className={styles.btn} onClick={() => getPosts()}>
+          {isPostsLoading ? "loading..." : "get allPosts"}
         </button>
         <div
           style={{
@@ -28,13 +28,7 @@ const UseAxiosExample = () => {
             flexWrap: "wrap",
           }}
         >
-          {photos.map((data) => (
-            <img
-              key={`photos_${data.id}`}
-              src={data.thumbnailUrl}
-              alt="example img"
-            />
-          ))}
+          {JSON.stringify(allPosts)}
         </div>
       </div>
       <div>
